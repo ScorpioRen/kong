@@ -40,10 +40,10 @@ for _, strategy in helpers.each_strategy() do
         assert.is_table(plugin)
         assert.equal(service_fixture.id, plugin.service.id)
         assert.same({
+          anonymous = "",
           run_on_preflight = true,
           hide_credentials = false,
           key_names        = {"apikey"},
-          anonymous        = "",
           key_in_body      = false,
         }, plugin.config)
       end)
@@ -55,10 +55,10 @@ for _, strategy in helpers.each_strategy() do
         assert.is_table(plugin)
         assert.equal(service_fixture.id, plugin.service.id)
         assert.same({
+          anonymous = "",
           run_on_preflight = true,
           hide_credentials = false,
           key_names        = {"api-key"},
-          anonymous        = "",
           key_in_body      = false,
         }, plugin.config)
       end)
